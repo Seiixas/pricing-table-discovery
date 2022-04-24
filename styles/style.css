@@ -1,0 +1,169 @@
+:root {
+  --yellow: #ffcc29;
+  --blue: #1d539e;
+  --deep-blue: #1E2338;
+  --gray: #828799;
+  --page-background: #f9fbfc;
+}
+
+/* Estilizando o base */
+body {
+  background: var(--page-background);
+  height: 100vh;
+  width: 100%;
+}
+
+/* Estilizando o header */
+header.head {
+  background: var(--blue);
+  color: white;
+  text-align: center;
+  height: 50vh;
+  max-height: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header.head h1 {
+  font-size: 48px;
+  margin-bottom: 1rem;
+}
+
+/* Estilizando a principal */
+main {
+  height: 50vh;
+  max-height: 1000px;
+}
+
+/* Estilizando os cartões */
+div.cards {
+  margin-top: -6rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 50%;
+}
+
+/* Estilizando o cartão */
+div.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: white;
+  border-radius: .5rem;
+  width: 355px;
+  height: 470px;
+  color: var(--gray);
+  font-size: 14px;
+  margin-left: 1rem;
+  max-width: 355px;;
+  box-shadow: 0 5px 4px;
+}
+
+div.card:first-child {
+  margin-left: 0;
+}
+
+div.card.premium {
+  height: 500px;
+  margin-top: -1rem;
+}
+
+/* Estilizando o cabeçalho do cartão */
+div.card .content header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--deep-blue);
+  height: 76px;
+  padding: 0 1.5rem;
+  font-size: 13px;
+}
+
+div.card.premium .content header {
+  background: var(--yellow);
+  color: var(--blue);
+  border-radius: .5rem .5rem 0 0;
+}
+
+div.card .content header span {
+  color: white;
+  background: var(--blue);
+  border-radius: 1rem;
+  padding: .5rem 1rem;
+  font-size: 12px;
+}
+
+/* Estilizando o sobre */
+div.card .content .about {
+  padding: 1.5rem;
+}
+
+/* Estilizando os preços */
+div.price {
+  margin-bottom: 1rem;
+}
+
+div.price span.real {
+  color: var(--deep-blue);
+  font-size: 36px;
+  font-weight: bold;
+}
+
+div.price span.cents {
+  color: var(--deep-blue);
+  font-weight: bold;
+}
+
+div.price span.month {
+  color: var(--gray);
+}
+
+div.about hr {
+  border-top: 1px solid #EEEEEE;
+  margin: 1rem 0;
+}
+
+div.about ul {
+  list-style: none;
+}
+
+div.about ul li {
+  display: flex;
+  margin-bottom: .5rem;
+}
+
+div.about ul li span {
+  font-weight: 600;
+}
+
+div.about ul li img {
+  margin-right: .5rem;
+}
+
+div.card.premium button {
+  background: var(--blue);
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+div.card button {
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid var(--blue);
+  color: var(--blue);
+  font-weight: bold;
+  font-size: 16px;
+  padding: 1rem;
+  margin: 1.5rem;
+  border-radius: .5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .cards > .card {
+    margin-left: 0;
+    margin-bottom: 2rem;
+  }
+}
